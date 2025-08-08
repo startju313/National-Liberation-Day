@@ -1,0 +1,204 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 40px;
+
+  background-image: url('korean-flag.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  transition: 0.3s;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.85); /* 약간 투명한 흰색 배경 */
+  padding: 30px;
+  color: #000;
+  border: 4px solid black;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+body.dark {
+  background-color: #111;
+  background-image: none;
+}
+
+body.dark .container {
+  background: #222;
+  border-color: #eee;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header h2 {
+  font-size: 26px;
+  color: #c0392b;
+  margin-bottom: 10px;
+}
+
+body.dark .header h2,
+body.dark .progress,
+body.dark .subtitle {
+  color: #fff;
+}
+
+#dark-toggle {
+  font-size: 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.subtitle {
+  text-align: center;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #c0392b;
+}
+
+.progress {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#praise-message {
+  font-size: 16px;
+  transition: all 0.4s ease;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 12px;
+  background: #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: #27ae60;
+  transition: width 0.3s ease-in-out;
+}
+
+.add-todo-form {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+#todo-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  font-size: 16px;
+}
+
+button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 6px;
+  margin-right: 8px;
+}
+
+button:last-child {
+  margin-right: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background: rgba(255, 255, 255, 0.9); /* 반투명 흰색 배경 */
+  color: #2c3e50;
+  margin-top: 12px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  position: relative;
+}
+
+.todo-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.custom-checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #aaa;
+  background-color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.custom-checkbox.checked {
+  background-color: #e74c3c;
+}
+
+.custom-checkbox.checked + span {
+  text-decoration: line-through;
+  color: #999;
+}
+
+button i {
+  font-size: 18px;
+  color: white;
+}
+
+.quote-box {
+  background: #fafafa;
+  color: #333;
+  padding: 10px;
+  margin-top: 20px;
+  border-left: 5px solid #2980b9;
+  font-style: italic;
+  white-space: pre-line;
+}
+
+.share-box {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.share-box button {
+  color: black;
+  background: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 6px;
+}
+
+#copy-status {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  color: green;
+}
